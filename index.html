@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="微信">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#EDEDED">
+<title>微信</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- 状态栏 -->
+    <div class="statusbar">
+        <div class="sb-time" id="sbTime">22:00</div>
+        <div class="sb-right">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+                <rect x="0" y="8" width="3" height="4" rx="1" fill="#000"/>
+                <rect x="5" y="5.6" width="3" height="6.4" rx="1" fill="#000"/>
+                <rect x="10" y="3.2" width="3" height="8.8" rx="1" fill="#000"/>
+                <rect x="15" y="0.8" width="3" height="11.2" rx="1" fill="#000" opacity=".3"/>
+            </svg>
+            <span class="sb-net">5G</span>
+            <div class="sb-battery">
+                <svg width="27" height="13" viewBox="0 0 27 13">
+                    <rect x=".5" y=".5" width="23" height="12" rx="3.8" fill="none" stroke="#000" stroke-opacity=".35"/>
+                    <rect x="2" y="2" width="16.2" height="9" rx="2.2" fill="#07C160"/>
+                    <path d="M25 4.6c1 .3 1.6 1 1.6 1.9s-.6 1.6-1.6 1.9z" fill="#000" opacity=".35"/>
+                </svg>
+                <span class="lvl">76</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="pages">
+
+        <section class="page active" id="page-chats">
+            <!-- 导航栏 -->
+            <div class="navbar">
+                <div class="title">微信</div>
+                <button class="nav-add" type="button" aria-label="更多功能">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10.4" stroke="#191919" stroke-width="1.3"/>
+                        <path d="M12 6.9v10.2M6.9 12h10.2" stroke="#191919" stroke-width="1.3" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- 搜索 -->
+            <div class="search-wrap">
+                <div class="search">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none">
+                        <circle cx="6.4" cy="6.4" r="4.9" stroke="#9A9A9A" stroke-width="1.4"/>
+                        <path d="M10.2 10.2l3.3 3.3" stroke="#9A9A9A" stroke-width="1.4" stroke-linecap="round"/>
+                    </svg>
+                    <span>搜索</span>
+                </div>
+            </div>
+
+            <!-- 会话列表 -->
+            <div class="list">
+
+                <!-- 腾讯新闻 -->
+                <div class="row">
+                    <div class="avatar-wrap">
+                        <div class="avatar">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="txng" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#2E86FF"/>
+                                        <stop offset="34%" stop-color="#17C08B"/>
+                                        <stop offset="68%" stop-color="#FFC81A"/>
+                                        <stop offset="100%" stop-color="#FF4B4B"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="48" height="48" fill="#ffffff"/>
+                                <g fill="none" stroke-width="6.6" stroke-linecap="butt">
+                                    <path d="M24 8a16 16 0 0 1 16 16" stroke="#2E86FF"/>
+                                    <path d="M40 24a16 16 0 0 1-16 16" stroke="#17C08B"/>
+                                    <path d="M24 40a16 16 0 0 1-16-16" stroke="#FFC81A"/>
+                                    <path d="M8 24a16 16 0 0 1 16-16" stroke="#FF4B4B"/>
+                                </g>
+                                <circle cx="24" cy="24" r="10.4" fill="#ffffff"/>
+                                <path d="M24 16.6c-2.7 0-4.5 1.9-4.5 4.8v3.3l-1.4 1.7h11.8l-1.4-1.7v-3.3c0-2.9-1.8-4.8-4.5-4.8z" fill="#2E86FF"/>
+                                <circle cx="24" cy="28.2" r="1.7" fill="#FF6B4A"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="row-body">
+                        <div class="row-top">
+                            <div class="row-name"><span class="txt">腾讯新闻</span></div>
+                            <div class="row-time">22:00</div>
+                        </div>
+                        <div class="row-msg">金价跌跌不休，多家银行紧急提醒</div>
+                    </div>
+                </div>
+
+                <!-- 大开台州户外 -->
+                <div class="row">
+                    <div class="avatar-wrap">
+                        <div class="avatar">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#C6D4DD"/>
+                                        <stop offset="45%" stop-color="#A3B3BE"/>
+                                        <stop offset="100%" stop-color="#7C8A95"/>
+                                    </linearGradient>
+                                    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#8C99A3"/>
+                                        <stop offset="100%" stop-color="#6B7883"/>
+                                    </linearGradient>
+                                    <linearGradient id="grd2" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#5E6B75"/>
+                                        <stop offset="100%" stop-color="#49555E"/>
+                                    </linearGradient>
+                                    <filter id="grainA">
+                                        <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/>
+                                        <feColorMatrix type="saturate" values="0"/>
+                                    </filter>
+                                    <filter id="softA" x="-20%" y="-20%" width="140%" height="140%">
+                                        <feGaussianBlur stdDeviation=".35"/>
+                                    </filter>
+                                </defs>
+                                <rect width="48" height="48" fill="url(#sky2)"/>
+                                <ellipse cx="13" cy="11" rx="15" ry="6.5" fill="#E7EFF4" opacity=".42"/>
+                                <ellipse cx="38" cy="7" rx="12" ry="5" fill="#E7EFF4" opacity=".3"/>
+                                <path d="M0 29.5l8.5-6.5 7 4.5 9-7.5 8.5 6 15-4.5v26H0z" fill="url(#hill2)"/>
+                                <path d="M0 35l13-4.2 11.5 3.2 12-4 11.5 4V48H0z" fill="url(#grd2)"/>
+                                <!-- 两个人（背影，左远右近，轻微虚化） -->
+                                <g fill="#232B33" filter="url(#softA)">
+                                    <!-- 远处的人 -->
+                                    <path d="M10.9 30.6c0-2.2 1.5-3.7 3.4-3.7s3.4 1.5 3.4 3.7-1.5 3.9-3.4 3.9-3.4-1.7-3.4-3.9z"/>
+                                    <path d="M14.3 33.4c3.4 0 6.2 2.6 6.2 5.8V48H8.1V39.2c0-3.2 2.8-5.8 6.2-5.8z"/>
+                                </g>
+                                <g fill="#1B222A" filter="url(#softA)">
+                                    <!-- 近处的人 -->
+                                    <path d="M27.9 26.6c0-2.6 1.7-4.4 3.9-4.4s3.9 1.8 3.9 4.4-1.7 4.6-3.9 4.6-3.9-2-3.9-4.6z"/>
+                                    <path d="M31.8 30c4.2 0 7.7 3.1 7.7 6.9V48H24.1v-11.1c0-3.8 3.5-6.9 7.7-6.9z"/>
+                                </g>
+                                <g stroke="#3F4B56" stroke-width=".8" fill="none" stroke-linecap="round" opacity=".85">
+                                    <path d="M8.4 40.6c1.9-1.2 3.6-1.5 5.9-1.5s4 .3 5.9 1.5"/>
+                                    <path d="M24.4 38.4c2.2-1.4 4.6-1.8 7.4-1.8s5.2.4 7.4 1.8"/>
+                                </g>
+                                <rect width="48" height="48" filter="url(#grainA)" opacity=".055"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="row-body">
+                        <div class="row-top">
+                            <div class="row-name"><span class="txt">大开台州户外</span></div>
+                            <div class="row-time">星期五</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 直接收米 -->
+                <div class="row">
+                    <div class="avatar-wrap">
+                        <div class="avatar">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="bwBg" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="#EAEAEA"/>
+                                        <stop offset="50%" stop-color="#D2D2D2"/>
+                                        <stop offset="100%" stop-color="#B2B2B2"/>
+                                    </linearGradient>
+                                    <radialGradient id="vig" cx=".5" cy=".36" r=".68">
+                                        <stop offset="50%" stop-color="#000" stop-opacity="0"/>
+                                        <stop offset="100%" stop-color="#000" stop-opacity=".26"/>
+                                    </radialGradient>
+                                    <filter id="grainB">
+                                        <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" stitchTiles="stitch"/>
+                                        <feColorMatrix type="saturate" values="0"/>
+                                    </filter>
+                                </defs>
+                                <rect width="48" height="48" fill="url(#bwBg)"/>
+                                <rect x="0" y="0" width="15" height="48" fill="#DEDEDE" opacity=".8"/>
+                                <rect x="32" y="0" width="16" height="29" fill="#C8C8C8" opacity=".7"/>
+                                <!-- 衣服 -->
+                                <path d="M4.2 48c0-9 8.8-14.4 19.8-14.4S43.8 39 43.8 48z" fill="#232323"/>
+                                <path d="M4.2 48c0-9 8.8-14.4 19.8-14.4 1.9 0 3.7.2 5.4.6C18.9 36.4 13 41.4 13 48z" fill="#161616"/>
+                                <!-- 脖子 -->
+                                <path d="M20.2 27.2h8v8.6h-8z" fill="#A0A0A0"/>
+                                <!-- 脸 -->
+                                <path d="M17.2 20.4c0-5.7 3.3-9.8 7.8-9.8 4.4 0 7.7 3.9 7.7 9.4 0 3.5-1.3 6.3-3.4 7.9-1.3 1-3 1.6-4.7 1.6-4 0-7.4-3.7-7.4-9.1z" fill="#C9C9C9"/>
+                                <path d="M29.6 12.8c1.9 1.9 3.2 4.4 3.2 7.2 0 4.6-2.7 8-6.5 8.9 4.9.2 8.5-3.4 8.5-8.5 0-3.4-1.9-6.4-5.2-7.6z" fill="#B0B0B0"/>
+                                <!-- 鼻子 -->
+                                <path d="M23.7 17.2c.4 2.7.4 4.8-.2 6.8" stroke="#B4B4B4" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+                                <!-- 头发 -->
+                                <path d="M15.9 20.6c-.8-6.7 3.4-11.4 8.9-11.4 5.3 0 8.9 4.1 8.7 9.8-1-2.5-2.1-4-3.6-5.1-1.7 2.2-4.3 3.4-7.5 3.6-2.7.2-5 1.2-6.5 3.1z" fill="#151515"/>
+                                <!-- 眉毛 -->
+                                <path d="M19.5 17.2l2.7-.5M26.1 16.7l2.7.5" stroke="#5C5C5C" stroke-width="1" stroke-linecap="round"/>
+                                <!-- 眼睛 -->
+                                <ellipse cx="21.1" cy="19.6" rx="1" ry="1.25" fill="#3D3D3D"/>
+                                <ellipse cx="27.2" cy="19.4" rx="1" ry="1.25" fill="#3D3D3D"/>
+                                <!-- 嘴 -->
+                                <path d="M22.3 25.7c1.1.8 2.5.8 3.6 0" stroke="#8C8C8C" stroke-width=".9" fill="none" stroke-linecap="round"/>
+                                <rect width="48" height="48" fill="url(#vig)"/>
+                                <rect width="48" height="48" filter="url(#grainB)" opacity=".06"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="row-body">
+                        <div class="row-top">
+                            <div class="row-name">
+                                <span class="txt">直接收米</span>
+                                <svg class="nonic" width="17" height="17" viewBox="0 0 20 20" fill="none">
+                                    <circle cx="10" cy="10" r="7.6" stroke="#9E9E9E" stroke-width="1.2"/>
+                                    <rect x="5.3" y="8.9" width="9.4" height="2.2" rx=".9" fill="#9E9E9E"/>
+                                    <path d="M5.1 14.9L14.9 5.1" stroke="#9E9E9E" stroke-width="1.4" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="row-time">星期三</div>
+                        </div>
+                        <div class="row-msg">你有一笔待接收的转账</div>
+                    </div>
+                </div>
+
+                <!-- 公众号 -->
+                <div class="row">
+                    <div class="avatar-wrap">
+                        <div class="avatar">
+                            <svg viewBox="0 0 48 48" width="48" height="48">
+                                <defs>
+                                    <linearGradient id="gzh" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#4FA7FF"/>
+                                        <stop offset="100%" stop-color="#1E7BE4"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="48" height="48" fill="url(#gzh)"/>
+                                <path d="M24 16c-3.4-2.6-7.8-3.6-11.4-3v19.8c3.6-.6 8 .4 11.4 3 3.4-2.6 7.8-3.6 11.4-3V13c-3.6-.6-8 .4-11.4 3z" fill="#fff" opacity=".97"/>
+                                <path d="M24 18v17.6" stroke="#2E8BEF" stroke-width="1" opacity=".3"/>
+                            </svg>
+                        </div>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="row-body">
+                        <div class="row-top">
+                            <div class="row-name"><span class="txt">公众号</span></div>
+                            <div class="row-time">星期二</div>
+                        </div>
+                        <div class="row-msg">快讯：英皇娱乐宣布：谢霆锋、容祖儿任集团…</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="page" id="page-contacts">
+            <div class="navbar">
+                <div class="title">通讯录</div>
+                <div class="nav-right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="10.2" cy="8.4" r="3.6" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M3.6 19.4c0-3.6 3-5.6 6.6-5.6 1.1 0 2.1.2 3 .5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M17.6 13.4v5.2M15 16h5.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="search-wrap">
+                <div class="search">
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+                        <circle cx="7" cy="7" r="5" stroke="#B2B2B2" stroke-width="1.3"/>
+                        <path d="M10.8 10.8L14 14" stroke="#B2B2B2" stroke-width="1.3" stroke-linecap="round"/>
+                    </svg>
+                    <span>搜索</span>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#F5A03C">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                            <circle cx="11" cy="9.4" r="3.6" stroke="#fff" stroke-width="1.7"/>
+                            <path d="M4.4 20c0-3.4 3-5.4 6.6-5.4" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+                            <path d="M18.6 13.6v5M16.1 16.1h5" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">新的朋友</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#F5A03C">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                            <circle cx="13" cy="9.4" r="4" stroke="#fff" stroke-width="1.7"/>
+                            <path d="M5.6 20.6c0-3.8 3.3-6 7.4-6s7.4 2.2 7.4 6" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">仅聊天的朋友</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#2CB86C">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+                            <circle cx="9.4" cy="9.8" r="3.4" stroke="#fff" stroke-width="1.6"/>
+                            <path d="M3.4 19.6c0-3.2 2.7-5 6-5s6 1.8 6 5" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                            <circle cx="18" cy="10.6" r="2.8" stroke="#fff" stroke-width="1.6"/>
+                            <path d="M15.6 19.6c0-2.6 1.6-4.2 3.6-4.4 2 .2 3.4 1.8 3.4 4.4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">群聊</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#2A8CF0">
+                        <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+                            <path d="M4.4 11.4V5.6a1.2 1.2 0 0 1 1.2-1.2h5.8c.3 0 .6.1.9.4l8 8a1.2 1.2 0 0 1 0 1.7l-5.6 5.6a1.2 1.2 0 0 1-1.7 0l-8-8a1.2 1.2 0 0 1-.6-1.1z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/>
+                            <circle cx="8.8" cy="8.8" r="1.5" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">标签</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#2A8CF0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 6.2C10.4 4.8 8.4 4.2 6.6 4.2c-.9 0-1.6.1-2.1.3v14.6c.5-.2 1.2-.3 2.1-.3 1.8 0 3.8.6 5.4 2 1.6-1.4 3.6-2 5.4-2 .9 0 1.6.1 2.1.3V4.5c-.5-.2-1.2-.3-2.1-.3-1.8 0-3.8.6-5.4 2z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+                            <path d="M12 6.2v14.6" stroke="#fff" stroke-width="1.6"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">公众号</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#2A8CF0">
+                        <svg width="23" height="23" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 4.4l7.2 7.6-7.2 7.6-7.2-7.6z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M12 9.6l2.9 2.4-2.9 2.4-2.9-2.4z" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">服务号</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="avatar-sq" style="background-color:#2A8CF0">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 4.2c-4.4 0-7.8 3-7.8 6.8 0 2.2 1.2 4.1 3.1 5.3l-.8 3.4 3.4-1.7c.7.1 1.4.2 2.1.2 4.4 0 7.8-3 7.8-6.8S16.4 4.2 12 4.2z" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/>
+                            <path d="M8.6 11h6.8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">企业微信联系人</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="letter-label">A</div>
+
+            <div class="group">
+                <div class="cell" data-cid="阿光">
+                    <div class="avatar-sq" style="background:#BFD3C1">
+                        <svg width="40" height="40" viewBox="0 0 40 40" preserveAspectRatio="none">
+                            <rect width="40" height="40" fill="#BFD3C1"/>
+                            <circle cx="20" cy="16" r="6.4" fill="#8FA893"/>
+                            <path d="M7 40c0-7 5.8-10.6 13-10.6S33 33 33 40z" fill="#8FA893"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">阿光</div>
+                </div>
+                <div class="cell" data-cid="阿明">
+                    <div class="avatar-sq" style="background:#D9C7B8">
+                        <svg width="40" height="40" viewBox="0 0 40 40" preserveAspectRatio="none">
+                            <rect width="40" height="40" fill="#D9C7B8"/>
+                            <circle cx="20" cy="16" r="6.4" fill="#B39C88"/>
+                            <path d="M7 40c0-7 5.8-10.6 13-10.6S33 33 33 40z" fill="#B39C88"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">阿明</div>
+                </div>
+            </div>
+
+            <div style="height:40px;background:#EDEDED"></div>
+        </section>
+
+        <section class="page" id="page-discover">
+            <div class="navbar">
+                <div class="title">发现</div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="8.9" stroke="#F04848" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(-88.98 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#6060F0" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(-43.98 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#0C84E4" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(1.02 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#0CA8FC" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(46.02 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#00C06C" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(91.02 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#90CC00" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(136.02 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#FCC000" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(181.02 14 14)"/>
+                            <circle cx="14" cy="14" r="8.9" stroke="#F09C30" stroke-width="2.9" stroke-dasharray="5.99 49.93" transform="rotate(226.02 14 14)"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">朋友圈</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <path d="M14 14C12 6.8 5.4 5.6 3.6 9.2 1.8 12.6 3.4 18 7.2 18.9c3.4.8 6-1.7 6.8-4.9.8 3.2 3.4 5.7 6.8 4.9 3.8-.9 5.4-6.3 3.6-9.7C22.6 5.6 16 6.8 14 14z" stroke="#F09C30" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">视频号</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="10.4" stroke="#FC603C" stroke-width="2.8"/>
+                            <circle cx="14" cy="14" r="4.6" stroke="#FC603C" stroke-width="2.8"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">直播</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <path d="M13.8 10.8V9a3.6 3.6 0 1 0-7.2 0v2.2a1.4 1.4 0 0 0 1.4 1.4h12a2.6 2.6 0 0 1 2.6 2.6v.8H8.4v2.6a1.4 1.4 0 0 0 1.4 1.4h9.4" stroke="#0C84E4" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">扫一扫</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <ellipse cx="8" cy="20.2" rx="3.8" ry="3.1" transform="rotate(-20 8 20.2)" fill="#F04848"/>
+                            <path d="M11.6 18.8V4.8" stroke="#F04848" stroke-width="2.4" stroke-linecap="round"/>
+                            <path d="M12.2 5.2c4.4.8 7.2 3.6 6.6 8.2" stroke="#F04848" stroke-width="2.4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">听一听</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <path d="M9.65 3.24 Q14 0.7 18.35 3.24 Q17.3 8.28 18.56 8.17 Q25.52 7.35 25.49 12.39 Q20.6 14 21.33 15.03 Q25.52 20.65 21.14 23.14 Q17.3 19.72 16.77 20.86 Q14 27.3 9.65 24.76 Q10.7 19.72 9.44 19.83 Q2.48 20.65 2.51 15.61 Q7.4 14 6.67 12.97 Q2.48 7.35 6.86 4.86 Q10.7 8.28 11.23 7.14 Z" stroke="#FCB400" stroke-width="3" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">看一看</div>
+                    <i class="chev"></i>
+                </div>
+
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <path d="M14 9.6L14 3.8" stroke="#F04848" stroke-width="3.1" stroke-linecap="round"/>
+                            <path d="M17.81 11.8L22.83 8.9" stroke="#F04848" stroke-width="3.1" stroke-linecap="round"/>
+                            <path d="M17.81 16.2L22.83 19.1" stroke="#F04848" stroke-width="3.1" stroke-linecap="round"/>
+                            <path d="M14 18.4L14 24.2" stroke="#F04848" stroke-width="3.1" stroke-linecap="round"/>
+                            <path d="M10.19 16.2L5.17 19.1" stroke="#F04848" stroke-width="3.1" stroke-linecap="round"/>
+                            <path d="M10.19 11.8L5.17 8.9" stroke="#F04848" stroke-width="3.1" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">搜一搜</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="9" r="4" stroke="#0C84E4" stroke-width="2.4"/>
+                            <path d="M8.4 22.4l.6-5c.2-1.6 1.6-2.8 3.2-2.8h3.6c1.6 0 3 1.2 3.2 2.8l.6 5z" stroke="#0C84E4" stroke-width="2.4" stroke-linejoin="round"/>
+                            <path d="M5.4 5.2C2 8.2 2 19.8 5.4 22.8M22.6 5.2c3.4 3 3.4 14.6 0 17.6" stroke="#0C84E4" stroke-width="2.3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">附近的人</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <path d="M14 2.4L25.6 14H14z" fill="#0C84F0"/>
+                            <path d="M14 2.4L2.4 14H14z" fill="#F09C30"/>
+                            <path d="M25.6 14L14 25.6V14z" fill="#00C06C"/>
+                            <path d="M2.4 14L14 25.6V14z" fill="#F04848"/>
+                            <circle cx="14" cy="14" r="3.4" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.4"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">游戏</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon lg">
+                        <svg viewBox="0 0 28 28" fill="none">
+                            <circle cx="14" cy="14" r="10.3" stroke="#6060F0" stroke-width="2.8"/>
+                            <path d="M9.6 18c-.6-3.8 7.8-3.6 7.4-7.4-.2-2-2.6-2.3-3.4-.5" stroke="#6060F0" stroke-width="2.8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">小程序</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div style="height:12px;background:#EDEDED"></div>
+        </section>
+
+        <section class="page" id="page-me">
+            <div class="me-head">
+                <div class="me-row">
+                    <div class="avatar-me me-entry" id="meAvatar">
+                        <svg viewBox="0 0 52 52" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="meAv" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#3A3A3A"/>
+                                    <stop offset="1" stop-color="#101010"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="52" height="52" fill="url(#meAv)"/>
+                            <circle cx="26" cy="19.5" r="9" fill="#6E6E6E"/>
+                            <path d="M7 52c0-9.6 8.5-14.6 19-14.6S45 42.4 45 52z" fill="#6E6E6E"/>
+                            <path d="M17 15c1.6-6 4.6-8.6 9-8.6s7.4 2.6 9 8.6c-2.6-2.4-5.6-3.6-9-3.6s-6.4 1.2-9 3.6z" fill="#1C1C1C"/>
+                        </svg>
+                    </div>
+                    <div class="me-info">
+                        <div class="me-name me-entry">
+                            <span id="meNameText">直接收米</span>
+                        </div>
+                        <div class="me-id me-entry">
+                            <span id="meIdText">微信号：ask568988</span>
+                            <i class="chev"></i>
+                        </div>
+                    </div>
+                    <div class="qr-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <rect x="1" y="1" width="13" height="12.6" rx="1.1" stroke="#576B95" stroke-width="1.55"/>
+                            <rect x="5.6" y="5.6" width="3.2" height="3.2" fill="#576B95"/>
+                            <rect x="17" y="1" width="6" height="6.6" rx="0.9" stroke="#576B95" stroke-width="1.55"/>
+                            <rect x="16.6" y="10.4" width="2.9" height="2.7" fill="#576B95"/>
+                            <rect x="20.6" y="10.4" width="2.9" height="2.7" fill="#576B95"/>
+                            <rect x="1" y="16.4" width="6.6" height="6.6" rx="0.9" stroke="#576B95" stroke-width="1.55"/>
+                            <rect x="10.6" y="15.6" width="2.9" height="2.7" fill="#576B95"/>
+                            <rect x="10.6" y="19.7" width="2.9" height="2.7" fill="#576B95"/>
+                            <rect x="17" y="16.4" width="6" height="6.6" rx="0.9" stroke="#576B95" stroke-width="1.55"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="me-tags">
+                    <div class="pill"><span class="plus">＋</span><span>状态</span></div>
+                    <div class="circle-btn">
+                        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                            <path d="M6.32 1.72 A6.5 6.5 0 1 0 12.98 3.82" fill="none" stroke="#727277"
+                                  stroke-width="1.4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group plain">
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12.4 2.2C6.8 2.2 2.7 5.9 2.7 10.8c0 2.4 1 4.5 2.6 6.1L4.5 21.3l5-2.1c.9.3 1.9.4 2.9.4 5.6 0 9.7-3.7 9.7-8.6s-4.1-8.6-9.7-8.6z" stroke="#00C06C" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M7.6 11.1l3.2 3.7 6.2-7" stroke="#00C06C" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">服务</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+            <div class="group cont">
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2.4l8.8 4.5L12 11.4 3.2 6.9z" stroke="#1884F0" stroke-width="1.9" stroke-linejoin="round"/>
+                            <path d="M3.2 6.9v10l8.8 4.5v-10z" stroke="#FCC024" stroke-width="1.9" stroke-linejoin="round"/>
+                            <path d="M20.8 6.9v10L12 21.4v-10z" stroke="#F04854" stroke-width="1.9" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">收藏</div>
+                    <i class="chev"></i>
+                </div>
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="2.6" y="4.2" width="18.8" height="15.6" rx="1.8" stroke="#0C84E4" stroke-width="2"/>
+                            <path d="M3 18.2l6.3-6.3 3.4 3.4 2.7-2.7 5.6 5.4" stroke="#0C84E4" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">朋友圈</div>
+                    <i class="chev"></i>
+                </div>
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="7.4" y="2.6" width="13.8" height="13.8" rx="1.9" stroke="#F09C30" stroke-width="1.9"/>
+                            <rect x="2.9" y="7.1" width="13.8" height="13.8" rx="1.9" fill="#FFFFFF" stroke="#0C84E4" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">作品</div>
+                    <i class="chev"></i>
+                </div>
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M3.8 11.2L5.5 4.6h13L20.2 11.2q-2.8 2.3-5.6 0-2.8 2.3-5.6 0-2.8 2.3-5.2 0z" stroke="#FC603C" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                            <path d="M5.2 14c.2 4.2 3.1 6.6 6.8 6.6s6.6-2.4 6.8-6.6" stroke="#FC603C" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">小店与卡包</div>
+                    <i class="chev"></i>
+                </div>
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9.4" stroke="#FCB400" stroke-width="2"/>
+                            <circle cx="8.7" cy="9.6" r="1.55" fill="#FCB400"/>
+                            <circle cx="15.3" cy="9.6" r="1.55" fill="#FCB400"/>
+                            <path d="M7.1 13a4.9 4.9 0 0 0 9.8 0" stroke="#FCB400" stroke-width="2.2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">表情</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+            <div class="group">
+                <div class="cell">
+                    <div class="cell-icon">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M10.14 1.46 A10.7 10.7 0 0 1 13.86 1.46 L14.02 4.47 A7.8 7.8 0 0 1 15.9 5.25 L18.14 3.24 A10.7 10.7 0 0 1 20.76 5.86 L18.75 8.1 A7.8 7.8 0 0 1 19.53 9.98 L22.54 10.14 A10.7 10.7 0 0 1 22.54 13.86 L19.53 14.02 A7.8 7.8 0 0 1 18.75 15.9 L20.76 18.14 A10.7 10.7 0 0 1 18.14 20.76 L15.9 18.75 A7.8 7.8 0 0 1 14.02 19.53 L13.86 22.54 A10.7 10.7 0 0 1 10.14 22.54 L9.98 19.53 A7.8 7.8 0 0 1 8.1 18.75 L5.86 20.76 A10.7 10.7 0 0 1 3.24 18.14 L5.25 15.9 A7.8 7.8 0 0 1 4.47 14.02 L1.46 13.86 A10.7 10.7 0 0 1 1.46 10.14 L4.47 9.98 A7.8 7.8 0 0 1 5.25 8.1 L3.24 5.86 A10.7 10.7 0 0 1 5.86 3.24 L8.1 5.25 A7.8 7.8 0 0 1 9.98 4.47 Z" stroke="#0C84E4" stroke-width="2" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="3.3" stroke="#0C84E4" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <div class="cell-title">设置</div>
+                    <i class="chev"></i>
+                </div>
+            </div>
+
+            <div style="height:16px;background:#EDEDED"></div>
+        </section>
+
+        <!-- 通讯录右侧字母索引 -->
+        <div class="index-bar" id="indexBar">
+            <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span>
+            <span>H</span><span>I</span><span>J</span><span>K</span><span>L</span><span>M</span><span>N</span>
+            <span>O</span><span>P</span><span>Q</span><span>R</span><span>S</span><span>T</span><span>U</span>
+            <span>V</span><span>W</span><span>X</span><span>Y</span><span>Z</span><span>#</span>
+        </div>
+
+
+        <!-- ============ 新增：聊天详情页 ============ -->
+        <section class="page" id="page-chat">
+            <div class="navbar chat-nav">
+                <button class="chat-back" id="chatBack" type="button" aria-label="返回">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 4.5L7.5 12l7.5 7.5" stroke="#191919" stroke-width="1.9"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="title" id="chatTitleText">微信</div>
+                <button class="chat-more" id="chatMore" type="button" aria-label="聊天信息">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="5" cy="12" r="1.7" fill="#191919"/>
+                        <circle cx="12" cy="12" r="1.7" fill="#191919"/>
+                        <circle cx="19" cy="12" r="1.7" fill="#191919"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="chat-scroll" id="chatScroll">
+                <div class="chat-time" id="chatTimeText">上午 9:41</div>
+                <div id="msgList"></div>
+            </div>
+
+            <!-- 表情面板（微信经典表情，点击直接发送） -->
+            <div class="emoji-panel" id="emojiPanel">
+                <div class="emoji-grid" id="emojiGrid"></div>
+            </div>
+
+            <!-- ＋ 面板：与微信一致的功能宫格 -->
+            <div class="chat-plus-panel" id="chatPlusPanel">
+                <div class="plus-grid">
+                    <button class="plus-item" type="button" data-demo="照片">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="4.4" width="18" height="15.2" rx="2.6" stroke="#3A3A3C" stroke-width="1.7"/>
+                                <circle cx="8.5" cy="9.7" r="1.55" fill="#3A3A3C"/>
+                                <path d="M3.7 17.4l5-4.8 3.5 3.3 2.8-2.7 5.3 5.1" stroke="#3A3A3C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <span>照片</span>
+                    </button>
+                    <button class="plus-item" type="button" data-demo="拍摄">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2.8" y="6.4" width="18.4" height="13" rx="3" stroke="#3A3A3C" stroke-width="1.7"/>
+                                <path d="M8.4 6.4l1.3-2h4.6l1.3 2" stroke="#3A3A3C" stroke-width="1.7" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12.9" r="3.5" stroke="#3A3A3C" stroke-width="1.7"/>
+                            </svg>
+                        </span>
+                        <span>拍摄</span>
+                    </button>
+                    <button class="plus-item" type="button" data-demo="视频通话">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="2.8" y="6.2" width="12.6" height="11.6" rx="3" fill="#3A3A3C"/>
+                                <path d="M16.2 11l4.2-2.6c.5-.3.9 0 .9.5v6.2c0 .5-.4.8-.9.5L16.2 13z" fill="#3A3A3C"/>
+                            </svg>
+                        </span>
+                        <span>视频通话</span>
+                    </button>
+                    <button class="plus-item" type="button" data-demo="位置">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 21.2s7-6.1 7-11.2a7 7 0 1 0-14 0c0 5.1 7 11.2 7 11.2z" fill="#3A3A3C"/>
+                                <circle cx="12" cy="9.8" r="2.7" fill="#FFFFFF"/>
+                            </svg>
+                        </span>
+                        <span>位置</span>
+                    </button>
+                    <button class="plus-item" id="btnRedPacket" type="button">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="#E4573D">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 4l-7 4-7-4V5l7 4 7-4v2z"/>
+                            </svg>
+                        </span>
+                        <span>红包</span>
+                    </button>
+                    <button class="plus-item" type="button" data-demo="礼物">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="3.2" y="8.6" width="17.6" height="4.2" rx="1" fill="#E4573D"/>
+                                <rect x="4.6" y="12.8" width="14.8" height="7.6" rx="1.2" fill="#E4573D"/>
+                                <rect x="10.6" y="8.6" width="2.8" height="11.8" fill="#FFFFFF" opacity=".92"/>
+                                <path d="M12 8.4c-2.9 0-4.4-1.3-4.4-2.9 0-1.4 1.1-2.3 2.4-2.3 1.9 0 2 2.6 2 5.2zm0 0c2.9 0 4.4-1.3 4.4-2.9 0-1.4-1.1-2.3-2.4-2.3-1.9 0-2 2.6-2 5.2z" stroke="#E4573D" stroke-width="1.5"/>
+                            </svg>
+                        </span>
+                        <span>礼物</span>
+                    </button>
+                    <button class="plus-item" id="btnTransfer" type="button">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="#3C6E9E">
+                                <path d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"/>
+                            </svg>
+                        </span>
+                        <span>转账</span>
+                    </button>
+                    <button class="plus-item" id="btnAddTime" type="button">
+                        <span class="pi-box">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="8.8" stroke="#3A3A3C" stroke-width="1.7"/>
+                                <path d="M12 6.9V12l3.5 2.2" stroke="#3A3A3C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18.1 3.8l1.7 1.7M5.9 3.8L4.2 5.5" stroke="#3A3A3C" stroke-width="1.7" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <span>添加时间</span>
+                    </button>
+                </div>
+                <div class="plus-dots"><i class="on"></i><i></i></div>
+            </div>
+
+            <div class="chat-bar">
+                <button class="ibtn" type="button" aria-label="语音输入">
+                    <svg width="27" height="27" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10.85" stroke="#2E2E2E" stroke-width="1.75"/>
+                        <path d="M9.2 10.2L7.05 12 9.2 13.8z" fill="#2E2E2E" stroke="#2E2E2E" stroke-width="0.7" stroke-linejoin="round"/>
+                        <path d="M11.5 8.45a6.6 6.6 0 0 1 0 7.1" stroke="#2E2E2E" stroke-width="1.55" stroke-linecap="round"/>
+                        <path d="M13.5 5.95a10.2 10.2 0 0 1 0 12.1" stroke="#2E2E2E" stroke-width="1.55" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <textarea class="chat-field" id="chatInput" rows="1" enterkeyhint="send" autocomplete="off" placeholder=""></textarea>
+                <button class="ibtn" id="emojiBtn" type="button" aria-label="表情">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <circle cx="13.5" cy="13.5" r="12.5" stroke="#1C1C1C" stroke-width="1.67"/>
+                        <circle cx="8.85" cy="9.5" r="2" fill="#1C1C1C"/>
+                        <circle cx="18.15" cy="9.5" r="2" fill="#1C1C1C"/>
+                        <path d="M6.5 15H20.5A7 6.17 0 0 1 6.5 15Z" stroke="#1C1C1C" stroke-width="1.67" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <button class="ibtn" id="plusBtn" type="button" aria-label="更多">
+                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none">
+                        <circle cx="13.5" cy="13.5" r="12.5" stroke="#1C1C1C" stroke-width="1.67"/>
+                        <path d="M13.5 6.83V20.17M6.83 13.5H20.17" stroke="#1C1C1C" stroke-width="1.67"/>
+                    </svg>
+                </button>
+                <button class="chat-send" id="chatSend" type="button">发送</button>
+            </div>
+        </section>
+
+        <!-- ============ 新增：添加对话 / 添加群聊 页 ============ -->
+        <section class="page" id="page-addchat">
+            <div class="navbar add-nav">
+                <button class="chat-back" id="addBack" type="button" aria-label="返回">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 4.5L7.5 12l7.5 7.5" stroke="#191919" stroke-width="1.9"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="title" id="addTitle">添加对话</div>
+            </div>
+
+            <div class="add-body">
+                <div class="add-card">
+                    <div class="add-row tall" id="addRowAvatar">
+                        <span class="add-name">头像</span>
+                        <span class="add-right">
+                            <span class="add-av" id="addAv"></span>
+                            <svg class="add-chev" width="9" height="16" viewBox="0 0 9 16" fill="none" aria-hidden="true">
+                                <path d="M1.4 1.4L7.5 8l-6.1 6.6" stroke="#8C8C91" stroke-width="1.7"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="add-card">
+                    <div class="add-row" id="addRowName">
+                        <span class="add-name">昵称</span>
+                        <span class="add-right">
+                            <span class="add-val" id="addNameVal">输入昵称</span>
+                            <svg class="add-chev" width="9" height="16" viewBox="0 0 9 16" fill="none" aria-hidden="true">
+                                <path d="M1.4 1.4L7.5 8l-6.1 6.6" stroke="#8C8C91" stroke-width="1.7"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="add-card">
+                    <div class="add-row" id="addRowContent">
+                        <span class="add-name">内容</span>
+                        <span class="add-right">
+                            <span class="add-val" id="addContentVal">输入内容</span>
+                            <svg class="add-chev" width="9" height="16" viewBox="0 0 9 16" fill="none" aria-hidden="true">
+                                <path d="M1.4 1.4L7.5 8l-6.1 6.6" stroke="#8C8C91" stroke-width="1.7"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                <button class="add-confirm" id="addConfirm" type="button">确定</button>
+            </div>
+        </section>
+
+        <!-- ============ 新增：联系人资料页 ============ -->
+        <section class="page" id="page-profile">
+            <div class="navbar profile-nav">
+                <button class="chat-back" id="profileBack" type="button" aria-label="返回">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 4.5L7.5 12l7.5 7.5" stroke="#191919" stroke-width="1.9"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="title">详细资料</div>
+            </div>
+
+            <div class="profile-card">
+                <div class="pav pedit" id="profileAvatar"></div>
+                <div>
+                    <div class="pname pedit" id="profileName">阿光</div>
+                    <div class="pid pedit" id="profileId">微信号：wxid_aguang_01</div>
+                </div>
+            </div>
+
+            <div class="prow"><span>备注和标签</span><span class="pv">›</span></div>
+            <div class="prow"><span>朋友圈</span><span class="pv">›</span></div>
+            <div class="prow"><span>更多信息</span><span class="pv">›</span></div>
+
+            <div class="profile-action">
+                <button type="button" id="profileSend">发消息</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- 底部 Tab -->
+    <nav class="tabbar">
+        <button class="tab active" type="button" data-page="page-chats">
+            <svg width="27" height="27" viewBox="0 0 28 28" fill="none">
+                <path class="tb-line" d="M14 4.6C8.3 4.6 3.8 8.35 3.8 12.9c0 2.4 1.3 4.6 3.4 6.15l-.85 3.55c-.07.3.25.53.51.38l3.94-2.15c1.05.25 2.1.35 3.2.35 5.7 0 10.2-3.75 10.2-8.3S19.7 4.6 14 4.6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path class="tb-fill" d="M14 4.6C8.3 4.6 3.8 8.35 3.8 12.9c0 2.4 1.3 4.6 3.4 6.15l-.85 3.55c-.07.3.25.53.51.38l3.94-2.15c1.05.25 2.1.35 3.2.35 5.7 0 10.2-3.75 10.2-8.3S19.7 4.6 14 4.6Z" fill="currentColor" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/>
+            </svg>
+            <span>微信</span>
+        </button>
+
+        <button class="tab" type="button" data-page="page-contacts">
+            <svg width="27" height="27" viewBox="0 0 28 28" fill="none">
+                <circle cx="10.8" cy="9.1" r="4.1" stroke="currentColor" stroke-width="1.55"/>
+                <path d="M3.6 23.4c0-4.2 3.2-6.9 7.2-6.9s7.2 2.7 7.2 6.9" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
+                <path d="M19.8 8.4h5.4M19.8 12.2h5.4M19.8 16h5.4" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
+            </svg>
+            <span>通讯录</span>
+        </button>
+
+        <button class="tab" type="button" data-page="page-discover">
+            <svg width="27" height="27" viewBox="0 0 28 28" fill="none">
+                <circle cx="14" cy="14" r="9.6" stroke="currentColor" stroke-width="1.55"/>
+                <path d="M17.9 10.1l-2.3 5.5-5.5 2.3 2.3-5.5z" fill="currentColor"/>
+            </svg>
+            <span>发现</span>
+            <i class="tbadge"></i>
+        </button>
+
+        <button class="tab" type="button" data-page="page-me">
+            <svg width="27" height="27" viewBox="0 0 28 28" fill="none">
+                <g class="tb-line">
+                    <circle cx="14" cy="9.2" r="4.5" stroke="currentColor" stroke-width="1.55"/>
+                    <path d="M4.9 24.3c0-4.9 4.1-8 9.1-8s9.1 3.1 9.1 8" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
+                </g>
+                <g class="tb-fill" fill="currentColor">
+                    <circle cx="14" cy="9.2" r="4.55"/>
+                    <path d="M4.85 24.9c0-4.85 4.1-7.95 9.15-7.95s9.15 3.1 9.15 7.95c0 .3-.25.55-.55.55H5.4a.55.55 0 0 1-.55-.55Z"/>
+                </g>
+            </svg>
+            <span>我</span>
+        </button>
+    </nav>
+
+    <div class="homearea">
+        <div class="home-bar"></div>
+    </div>
+</div>
+
+
+<!-- ============ 新增：浮层（气泡菜单 / 编辑弹框 / ＋菜单 / 轻提示） ============ -->
+<div class="bub-menu" id="bubMenu">
+    <button type="button" id="bubEdit">编辑</button>
+    <button type="button" id="bubDel">删除</button>
+</div>
+
+<div class="edit-mask" id="editMask">
+    <div class="edit-box">
+        <div class="eb-title">编辑聊天内容</div>
+        <textarea id="editInput" rows="3"></textarea>
+        <div class="eb-btns">
+            <button type="button" id="editCancel">取消</button>
+            <button type="button" id="editSave">保存</button>
+        </div>
+    </div>
+</div>
+
+<!-- 联系人资料：修改名字 / 微信号 -->
+<div class="edit-mask" id="pEditMask">
+    <div class="edit-box">
+        <div class="eb-title" id="pEditTitle">修改名字</div>
+        <input class="eb-input" id="pEditInput" type="text" autocomplete="off">
+        <div class="eb-btns">
+            <button type="button" id="pEditCancel">取消</button>
+            <button type="button" id="pEditSave">保存</button>
+        </div>
+    </div>
+</div>
+
+<!-- 头像裁剪 -->
+<div class="crop-mask" id="cropMask">
+    <div class="crop-title">调整头像</div>
+    <div class="crop-stage" id="cropStage"><img id="cropImg" alt=""></div>
+    <div class="crop-zoom">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="3.4" stroke="#fff" stroke-width="1.3"/>
+        </svg>
+        <input type="range" id="cropZoom" min="1" max="3" step="0.01" value="1">
+        <svg width="21" height="21" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="5.6" stroke="#fff" stroke-width="1.3"/>
+        </svg>
+    </div>
+    <div class="crop-btns">
+        <button type="button" id="cropCancel">取消</button>
+        <button type="button" id="cropOk">确定</button>
+    </div>
+</div>
+
+<div class="plus-menu" id="plusMenu">
+    <button type="button" data-act="add-one">添加单聊</button>
+    <button type="button" data-act="add-group">添加群聊</button>
+    <button type="button" data-act="clear">清空列表</button>
+    <button type="button" data-act="exit">退出模拟器</button>
+</div>
+
+<!-- 添加对话：昵称 / 群名称 输入弹框 -->
+<div class="edit-mask" id="addNameMask">
+    <div class="edit-box">
+        <div class="eb-title" id="addNameTitle">输入昵称</div>
+        <input class="eb-input" id="addNameInput" type="text" maxlength="16"
+               autocomplete="off" spellcheck="false">
+        <div class="eb-btns">
+            <button type="button" id="addNameCancel">取消</button>
+            <button type="button" id="addNameOk">确定</button>
+        </div>
+    </div>
+</div>
+
+<!-- 通用确认弹框 -->
+<div class="edit-mask" id="askMask">
+    <div class="edit-box">
+        <div class="eb-title" id="askTitle">清空聊天列表</div>
+        <div class="ask-text" id="askText"></div>
+        <div class="eb-btns">
+            <button type="button" id="askCancel">取消</button>
+            <button type="button" id="askOk">确定</button>
+        </div>
+    </div>
+</div>
+
+<!-- 退出模拟器 -->
+<div class="exit-layer" id="exitLayer">
+    <div class="exit-title">已退出模拟器</div>
+    <div class="exit-sub">这是网页演示版，随时可以重新进入</div>
+    <button class="exit-back" id="exitBack" type="button">重新进入</button>
+</div>
+
+<input type="file" id="addAvatarInput" accept="image/*" style="display:none">
+
+<!-- 单聊：改网名 -->
+<div class="edit-mask" id="chatNameMask">
+    <div class="edit-box">
+        <div class="eb-title">修改聊天名称</div>
+        <input class="eb-input" id="chatNameInput" type="text" maxlength="16"
+               autocomplete="off" spellcheck="false">
+        <div class="eb-btns">
+            <button type="button" id="chatNameCancel">取消</button>
+            <button type="button" id="chatNameOk">确定</button>
+        </div>
+    </div>
+</div>
+
+<!-- 单聊：转账金额 -->
+<div class="edit-mask" id="moneyMask">
+    <div class="edit-box">
+        <div class="eb-title">转账金额</div>
+        <input class="eb-input" id="moneyInput" type="text" inputmode="decimal"
+               placeholder="请输入金额" autocomplete="off" spellcheck="false">
+        <div class="eb-btns">
+            <button type="button" id="moneyCancel">取消</button>
+            <button type="button" id="moneyOk">转账</button>
+        </div>
+    </div>
+</div>
+
+<!-- 单聊：收款 / 退还 / 拆红包 -->
+<div class="edit-mask" id="payMask">
+    <div class="edit-box">
+        <div class="eb-title" id="payTitle"></div>
+        <div class="ask-text" id="payText"></div>
+        <div class="eb-btns">
+            <button type="button" id="payCancel">取消</button>
+            <button type="button" id="payOk">确定</button>
+        </div>
+    </div>
+</div>
+
+<input type="file" id="chatAvatarInput" accept="image/*" style="display:none">
+
+<div class="toast" id="toast"></div>
+<input type="file" id="profileAvatarInput" accept="image/*" style="display:none">
+
+<!-- ============ 个人信息页（头像 / 名字 / 微信号 可修改） ============ -->
+<section class="info-sheet" id="infoSheet">
+    <div class="info-nav">
+        <button class="info-back" id="infoBack" type="button" aria-label="返回">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M15 4.5L7.5 12l7.5 7.5" stroke="#191919" stroke-width="1.9"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+        <div class="info-title">个人信息</div>
+    </div>
+
+    <div class="info-body">
+        <div class="info-group">
+            <div class="info-row tall" id="rowAvatar">
+                <span>头像</span>
+                <span class="ir-right">
+                    <span class="ir-av" id="infoAvatar">
+                        <svg viewBox="0 0 52 52" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="infoAvG" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0" stop-color="#3A3A3A"/>
+                                    <stop offset="1" stop-color="#101010"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="52" height="52" fill="url(#infoAvG)"/>
+                            <circle cx="26" cy="19.5" r="9" fill="#6E6E6E"/>
+                            <path d="M7 52c0-9.6 8.5-14.6 19-14.6S45 42.4 45 52z" fill="#6E6E6E"/>
+                            <path d="M17 15c1.6-6 4.6-8.6 9-8.6s7.4 2.6 9 8.6c-2.6-2.4-5.6-3.6-9-3.6s-6.4 1.2-9 3.6z" fill="#1C1C1C"/>
+                        </svg>
+                    </span>
+                    <i class="chev"></i>
+                </span>
+            </div>
+
+            <div class="info-row" id="rowName">
+                <span>名字</span>
+                <span class="ir-right">
+                    <span class="ir-val" id="infoNameVal">直接收米</span>
+                    <i class="chev"></i>
+                </span>
+            </div>
+
+            <div class="info-row" id="rowId">
+                <span>微信号</span>
+                <span class="ir-right">
+                    <span class="ir-val" id="infoIdVal">ask568988</span>
+                    <i class="chev"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="info-gap"></div>
+
+        <div class="info-group">
+            <div class="info-row" id="rowQr">
+                <span>我的二维码</span>
+                <span class="ir-right">
+                    <span class="ir-qr">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <rect x="3.4" y="3.4" width="6.6" height="6.6" rx="1.2" stroke="#7A7E83" stroke-width="1.4"/>
+                            <rect x="14" y="3.4" width="6.6" height="6.6" rx="1.2" stroke="#7A7E83" stroke-width="1.4"/>
+                            <rect x="3.4" y="14" width="6.6" height="6.6" rx="1.2" stroke="#7A7E83" stroke-width="1.4"/>
+                            <path d="M14 14h2.4v2.4H14zM18.2 14h2.4M14 18.2v2.4M17 17.2h3.6v3.6H17z"
+                                  stroke="#7A7E83" stroke-width="1.4" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <i class="chev"></i>
+                </span>
+            </div>
+
+            <div class="info-row" id="rowMore">
+                <span>更多信息</span>
+                <span class="ir-right"><i class="chev"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 名字 / 微信号 输入弹框 -->
+<div class="edit-mask" id="infoMask">
+    <div class="edit-box">
+        <div class="eb-title" id="infoTitle">修改名字</div>
+        <input class="eb-input" id="infoInput" type="text" autocomplete="off" spellcheck="false">
+        <div class="eb-btns">
+            <button type="button" id="infoCancel">取消</button>
+            <button type="button" id="infoSave">保存</button>
+        </div>
+    </div>
+</div>
+
+<input type="file" id="avatarInput" accept="image/*" style="display:none">
+
+<!-- 外联脚本：先加载表情数据，再加载业务逻辑 -->
+<script src="js/emojis.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
